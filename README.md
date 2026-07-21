@@ -16,7 +16,7 @@ Tailwind CSS v4**.
 
 ![Dashboard screenshot](./docs/images/dashboard.png)
 
-📚 Full docs: [`docs/`](./docs/README.md) · Live in-app docs: [deepcity-care.codespanda.com/#/docs](https://deepcity-care.codespanda.com/#/docs)
+📚 Full docs: [`docs/`](./docs/README.md) · Live in-app docs: [deepcity-care.codespanda.com/docs](https://deepcity-care.codespanda.com/docs)
 
 ## Features
 
@@ -44,7 +44,7 @@ Tailwind CSS v4**.
 
 | | |
 | --- | --- |
-| Framework | [React 19](https://react.dev/) + [React Router](https://reactrouter.com/) (`HashRouter`, for static hosting) |
+| Framework | [React 19](https://react.dev/) + [React Router](https://reactrouter.com/) (`BrowserRouter`, with a GitHub Pages SPA-fallback) |
 | Build tool | [Vite](https://vite.dev/) |
 | Language | TypeScript |
 | Styling | [Tailwind CSS v4](https://tailwindcss.com/) with light/dark design tokens |

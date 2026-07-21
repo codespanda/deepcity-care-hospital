@@ -55,6 +55,7 @@ suite, so the type checker is the main safety net.
   `src/components/ui/`. Use the semantic tokens (`bg-card`, `text-foreground`,
   `border-border`, ...) rather than raw colors so components work in both themes — see
   [Theming](./theming.md).
-- **Routing.** `react-router-dom` with `HashRouter` (not `BrowserRouter`) — required for
-  static hosting on GitHub Pages, where there's no server to rewrite unknown paths back to
-  `index.html`.
+- **Routing.** `react-router-dom` with `BrowserRouter` — clean URLs (no `#`). Static
+  hosting on GitHub Pages has no server to rewrite unknown paths back to `index.html`, so
+  `public/404.html` + a decode script in `index.html` handle that (see
+  [Deployment](./deployment.md)).

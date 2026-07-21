@@ -6,10 +6,15 @@ currently live at **https://deepcity-care.codespanda.com/**.
 
 ## How it's wired up
 
-- **Router:** `src/main.tsx` uses `HashRouter`, not `BrowserRouter`. GitHub Pages has no
-  server to rewrite unknown paths back to `index.html`, so a `BrowserRouter` URL like
-  `/appointments` would 404 on refresh. `HashRouter` keeps all routing client-side after
-  `#`, e.g. `/#/appointments`, which always resolves to `index.html`.
+- **Router:** `src/main.tsx` uses `BrowserRouter`, so routes are clean paths like
+  `/appointments` with no `#`. GitHub Pages has no server to rewrite unknown paths back to
+  `index.html`, so a direct hit or refresh on a nested route needs a fallback — this repo
+  uses the [rafgraph/spa-github-pages](https://github.com/rafgraph/spa-github-pages)
+  redirect trick: `public/404.html` (served by GitHub Pages for any unmatched path)
+  redirects to `/` with the original path encoded in the query string, and a small script
+  at the top of `index.html` decodes it back with `history.replaceState` before React
+  Router mounts — so the URL bar ends up showing the original path with no visible
+  redirect or flash.
 - **Base path:** `vite.config.ts` sets `base: '/'`. This must match how the site is
   actually served — see the base-path section below before changing it.
 - **Custom domain:** `public/CNAME` contains `deepcity-care.codespanda.com`. Vite copies

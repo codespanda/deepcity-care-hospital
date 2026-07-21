@@ -7,7 +7,7 @@ deepcity-care-hospital/
 ├── templates/                  Copy-paste starter files for new pages/components
 ├── public/                     Static assets copied verbatim into dist/ (favicon, CNAME, ...)
 └── src/
-    ├── main.tsx                App entry point: ThemeProvider + HashRouter + TooltipProvider
+    ├── main.tsx                App entry point: ThemeProvider + BrowserRouter + TooltipProvider
     ├── App.tsx                 Route table (lazy-loaded pages)
     ├── index.css                Tailwind import + design tokens (light/dark CSS variables)
     │

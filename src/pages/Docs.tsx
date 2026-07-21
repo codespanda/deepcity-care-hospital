@@ -235,10 +235,18 @@ export function Docs() {
 
           <Section id="deploy" kicker="Deploy" title="Deploy to GitHub Pages">
             <p>
-              This project uses <code className="rounded bg-secondary px-1.5 py-0.5 text-foreground">HashRouter</code>, so
-              every route lives after a <code className="rounded bg-secondary px-1.5 py-0.5 text-foreground">#</code> (e.g.{' '}
-              <code className="rounded bg-secondary px-1.5 py-0.5 text-foreground">/#/appointments</code>) — GitHub Pages
-              never has to server-side rewrite a nested path, so there's no 404.html redirect trick needed.
+              This project uses <code className="rounded bg-secondary px-1.5 py-0.5 text-foreground">BrowserRouter</code>, so
+              routes are clean paths with no <code className="rounded bg-secondary px-1.5 py-0.5 text-foreground">#</code> (e.g.{' '}
+              <code className="rounded bg-secondary px-1.5 py-0.5 text-foreground">/appointments</code>). GitHub Pages has no
+              server-side rewrite for a nested path, so a hard navigation there would 404 before React Router ever sees it.{' '}
+              <code className="rounded bg-secondary px-1.5 py-0.5 text-foreground">public/404.html</code> re-encodes the path
+              and redirects to the root; a small script at the top of{' '}
+              <code className="rounded bg-secondary px-1.5 py-0.5 text-foreground">index.html</code> decodes it back with{' '}
+              <code className="rounded bg-secondary px-1.5 py-0.5 text-foreground">history.replaceState</code> before the
+              router mounts — see{' '}
+              <a href="https://github.com/rafgraph/spa-github-pages" target="_blank" rel="noreferrer noopener" className="text-primary hover:underline">
+                rafgraph/spa-github-pages
+              </a>.
             </p>
 
             <div>
@@ -276,7 +284,7 @@ export function Docs() {
           <Section id="structure" kicker="Project structure" title="A quick map of where things live">
             <CodeBlock lang="text" code={`src/
 ├─ App.tsx              # route table
-├─ main.tsx             # app entry (HashRouter + ThemeProvider)
+├─ main.tsx             # app entry (BrowserRouter + ThemeProvider)
 ├─ pages/                # route-level page components
 │  ├─ appointments/      # AppointmentsList, DoctorSchedule, AppointmentDetails
 │  ├─ patients/          # PatientsList, PatientProfile
