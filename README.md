@@ -14,8 +14,9 @@ Tailwind CSS v4**.
 [![shadcn/ui](https://img.shields.io/badge/shadcn%2Fui-black?logo=shadcnui&logoColor=white)](https://ui.shadcn.com/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](./LICENSE)
 
-There's no screenshot gallery here on purpose — click the live demo link above, it's the
-real thing running static from GitHub Pages.
+![Dashboard screenshot](./docs/images/dashboard.png)
+
+📚 Full docs: [`docs/`](./docs/README.md)
 
 ## Features
 

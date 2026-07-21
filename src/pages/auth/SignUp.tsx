@@ -50,7 +50,7 @@ export function SignUp() {
           </Label>
           <div className="relative">
             <Phone className="pointer-events-none absolute left-3 top-1/2 size-4 -translate-y-1/2 text-muted-foreground" />
-            <Input id="phone" type="tel" placeholder="98765 43210" className="pl-9" />
+            <Input id="phone" type="tel" placeholder="XXXXXXXXXX" className="pl-9" />
           </div>
         </div>
 

@@ -61,11 +61,11 @@ export function HospitalInfoTab() {
         <div className="grid grid-cols-1 gap-x-8 gap-y-5 sm:grid-cols-2">
           <div>
             <Label className="mb-1.5">Phone Number</Label>
-            <Input defaultValue="+91 172 500 1234" />
+            <Input defaultValue="+91 XXXXXXXXXX" />
           </div>
           <div>
             <Label className="mb-1.5">Emergency Number</Label>
-            <Input defaultValue="+91 98765 43210" />
+            <Input defaultValue="+91 XXXXXXXXXX" />
           </div>
           <div>
             <Label className="mb-1.5">Email</Label>

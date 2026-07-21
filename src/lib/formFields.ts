@@ -38,7 +38,7 @@ export const doctorFields: FormField[] = [
   { name: 'department', label: 'Department', type: 'select', options: departmentNames },
   { name: 'specialty', label: 'Specialty', type: 'text', placeholder: 'e.g. Cardiologist' },
   { name: 'experience', label: 'Experience', type: 'text', placeholder: 'e.g. 5 Years' },
-  { name: 'phone', label: 'Phone', type: 'tel', placeholder: '98765 43210' },
+  { name: 'phone', label: 'Phone', type: 'tel', placeholder: 'XXXXXXXXXX' },
   { name: 'email', label: 'Email', type: 'email', placeholder: 'name@deepcitycare.com' },
   { name: 'status', label: 'Status', type: 'select', options: ['Active', 'On Leave', 'Inactive'] },
 ]
@@ -48,7 +48,7 @@ export const patientFields: FormField[] = [
   { name: 'age', label: 'Age', type: 'number', placeholder: 'e.g. 28' },
   { name: 'gender', label: 'Gender', type: 'select', options: ['Male', 'Female'] },
   { name: 'bloodGroup', label: 'Blood Group', type: 'select', options: ['O+', 'O-', 'A+', 'A-', 'B+', 'B-', 'AB+', 'AB-'] },
-  { name: 'phone', label: 'Phone', type: 'tel', placeholder: '98765 43210' },
+  { name: 'phone', label: 'Phone', type: 'tel', placeholder: 'XXXXXXXXXX' },
   { name: 'email', label: 'Email', type: 'email', placeholder: 'name@email.com' },
   { name: 'primaryDoctor', label: 'Primary Doctor', type: 'select', options: doctorNames },
   { name: 'department', label: 'Department', type: 'select', options: departmentNames },

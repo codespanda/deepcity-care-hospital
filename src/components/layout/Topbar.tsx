@@ -37,18 +37,19 @@ export function Topbar({ onToggleSidebar }: { onToggleSidebar: () => void }) {
       <button
         type="button"
         onClick={onToggleSidebar}
-        className="flex size-10 shrink-0 items-center justify-center rounded-lg text-muted-foreground hover:bg-accent hover:text-accent-foreground"
+        aria-label="Toggle sidebar"
+        className="flex size-10 shrink-0 items-center justify-center rounded-lg text-muted-foreground hover:bg-accent hover:text-accent-foreground lg:hidden"
       >
         <Menu className="size-5" />
       </button>
 
-      <div className="relative w-full max-w-md">
+      <div className="relative min-w-0 flex-1 sm:max-w-md">
         <Search className="pointer-events-none absolute left-3 top-1/2 size-4 -translate-y-1/2 text-muted-foreground" />
         <Input
           placeholder="Search patients, appointments, doctors..."
-          className="h-10 rounded-lg bg-secondary/60 pl-9 pr-14"
+          className="h-10 rounded-lg bg-secondary/60 pl-9 pr-3 sm:pr-14"
         />
-        <kbd className="pointer-events-none absolute right-2 top-1/2 -translate-y-1/2 rounded border border-border bg-background px-1.5 py-0.5 text-[11px] font-medium text-muted-foreground">
+        <kbd className="pointer-events-none absolute right-2 top-1/2 hidden -translate-y-1/2 rounded border border-border bg-background px-1.5 py-0.5 text-[11px] font-medium text-muted-foreground sm:block">
           ⌘K
         </kbd>
       </div>

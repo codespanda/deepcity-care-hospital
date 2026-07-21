@@ -43,7 +43,7 @@ export function ProfileSettingsTab() {
         </div>
         <div>
           <Label className="mb-1.5">Phone Number</Label>
-          <Input type="tel" defaultValue="98765 43210" />
+          <Input type="tel" defaultValue="XXXXXXXXXX" />
         </div>
         <div>
           <Label className="mb-1.5">Department</Label>
