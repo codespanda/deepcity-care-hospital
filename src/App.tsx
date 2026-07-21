@@ -20,6 +20,7 @@ const Messages = lazy(() => import('@/pages/Messages').then((m) => ({ default: m
 const Settings = lazy(() => import('@/pages/Settings').then((m) => ({ default: m.Settings })))
 const SignIn = lazy(() => import('@/pages/auth/SignIn').then((m) => ({ default: m.SignIn })))
 const SignUp = lazy(() => import('@/pages/auth/SignUp').then((m) => ({ default: m.SignUp })))
+const Docs = lazy(() => import('@/pages/Docs').then((m) => ({ default: m.Docs })))
 
 function PageFallback() {
   return <div className="flex h-64 items-center justify-center text-sm text-muted-foreground">Loading...</div>
@@ -49,6 +50,7 @@ function App() {
         </Route>
         <Route path="/signin" element={<SignIn />} />
         <Route path="/signup" element={<SignUp />} />
+        <Route path="/docs" element={<Docs />} />
       </Routes>
     </Suspense>
   )

@@ -16,7 +16,7 @@ Tailwind CSS v4**.
 
 ![Dashboard screenshot](./docs/images/dashboard.png)
 
-📚 Full docs: [`docs/`](./docs/README.md)
+📚 Full docs: [`docs/`](./docs/README.md) · Live in-app docs: [deepcity-care.codespanda.com/#/docs](https://deepcity-care.codespanda.com/#/docs)
 
 ## Features
 
